@@ -4,17 +4,16 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.View.INVISIBLE
-import android.view.View.VISIBLE
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.master.film.R
-import com.master.film.callbacks.FavouritesCallback
+import com.master.film.callbacks.WatchedCallback
 import com.master.film.callbacks.FilmInfoCallback
 import com.master.film.config.Application
 import com.master.film.controllers.FilmInfoController
-import com.master.film.models.Favorites
+import com.master.film.models.WatchedFilms
 import com.master.film.models.FilmInfo
 import com.squareup.picasso.Picasso
 import javax.inject.Inject
@@ -43,14 +42,13 @@ class FilmInfoActivity : AppCompatActivity() {
             image = findViewById(R.id.filmImage)
 
             val addButton: Button = findViewById(R.id.addFilmButton)
-            val removeButton: Button = findViewById(R.id.removeFilmButton)
 
             val filmId = intent.extras?.getString(FILM_ID)!!
             val context = this
             var currentFilm = FilmInfo()
 
-            filmInfoController.getFavorites(object : FavouritesCallback {
-                override fun process(favorites: Favorites) {
+            filmInfoController.getWatched(object : WatchedCallback {
+                override fun process(favorites: WatchedFilms) {
                     val films = favorites.films
 
                     for (film in films) {
@@ -59,8 +57,6 @@ class FilmInfoActivity : AppCompatActivity() {
                             return
                         }
                     }
-
-                    removeButton.visibility = INVISIBLE
                 }
             })
 
@@ -72,16 +68,10 @@ class FilmInfoActivity : AppCompatActivity() {
             })
 
             addButton.setOnClickListener {
-                filmInfoController.addToFavorites(currentFilm)
+                filmInfoController.addToWatched(currentFilm)
                 addButton.visibility = INVISIBLE
-                removeButton.visibility = VISIBLE
             }
 
-            removeButton.setOnClickListener {
-                filmInfoController.removeFromFavorites(currentFilm.id!!)
-                addButton.visibility = VISIBLE
-                removeButton.visibility = INVISIBLE
-            }
         }
 
         private fun drawInfo(filmInfo: FilmInfo, context: Context) {

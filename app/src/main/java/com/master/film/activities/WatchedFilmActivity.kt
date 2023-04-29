@@ -8,14 +8,14 @@ import android.widget.Button
 import android.widget.ListView
 import androidx.appcompat.app.AppCompatActivity
 import com.master.film.R
-import com.master.film.callbacks.FavouritesCallback
+import com.master.film.callbacks.WatchedCallback
 import com.master.film.config.Application
 import com.master.film.controllers.FilmInfoController
-import com.master.film.models.Favorites
+import com.master.film.models.WatchedFilms
 import com.master.film.models.FilmInfo
 import javax.inject.Inject
 
-class FavouriteFilmActivity : AppCompatActivity() {
+class WatchedFilmActivity : AppCompatActivity() {
     @Inject
     lateinit var filmController: FilmInfoController
 
@@ -33,15 +33,14 @@ class FavouriteFilmActivity : AppCompatActivity() {
 
         val context = this
 
-        filmController.getFavorites(object : FavouritesCallback {
-            override fun process(favorites: Favorites) {
+        filmController.getWatched(object : WatchedCallback {
+            override fun process(favorites: WatchedFilms) {
                 val films = favorites.films
                 drawList(films, context)
             }
         })
 
         addFilmButton!!.setOnClickListener {
-
             val intent = Intent(this, SearchFilmActivity::class.java)
             startActivity(intent)
         }

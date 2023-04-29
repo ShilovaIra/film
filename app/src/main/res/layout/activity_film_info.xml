@@ -18,7 +18,7 @@
 
         <ImageView
             android:id="@+id/filmImage"
-            android:layout_width="410dp"
+            android:layout_width="match_parent"
             android:layout_height="353dp" />
 
         <TextView
@@ -28,7 +28,6 @@
             android:gravity="center_vertical"
             android:text="@string/title"
             android:textSize="20sp" />
-
 
         <TextView
             android:id="@+id/yearLabel"
@@ -57,19 +56,11 @@
         <Button
             android:id="@+id/addFilmButton"
             android:layout_width="match_parent"
-            android:layout_height="54dp"
+            android:layout_height="66dp"
             android:background="#4CAF50"
-            android:text="@string/add_to_favorites"
+            android:text="@string/add_to_watched"
             android:textColor="@android:color/background_light"
             android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/removeFilmButton"
-            android:layout_width="match_parent"
-            android:layout_height="54dp"
-            android:background="#4CAF50"
-            android:text="@string/remove_from_favorites"
-            android:textColor="@android:color/background_light"
-            android:textStyle="bold" />
     </LinearLayout>
 </ScrollView>

@@ -31,7 +31,7 @@ class LoginActivity : AppCompatActivity() {
 
         val auth = FirebaseAuth.getInstance()
         if (auth.currentUser != null) {
-            val intent = Intent(this, FavouriteFilmActivity::class.java)
+            val intent = Intent(this, WatchedFilmActivity::class.java)
             startActivity(intent)
         }
 
@@ -40,13 +40,13 @@ class LoginActivity : AppCompatActivity() {
             val password = password!!.text.toString()
 
             if (auth.currentUser != null) {
-                val intent = Intent(this, FavouriteFilmActivity::class.java)
+                val intent = Intent(this, WatchedFilmActivity::class.java)
                 startActivity(intent)
             } else {
                 auth.signInWithEmailAndPassword(login, password)
                     .addOnCompleteListener { task ->
                         if (task.isSuccessful) {
-                            val intent = Intent(this, FavouriteFilmActivity::class.java)
+                            val intent = Intent(this, WatchedFilmActivity::class.java)
                             startActivity(intent)
                         } else {
                             Toast.makeText(

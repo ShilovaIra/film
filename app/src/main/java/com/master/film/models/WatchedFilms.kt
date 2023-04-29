@@ -1,5 +1,5 @@
 package com.master.film.models
 
-class Favorites {
+class WatchedFilms {
     var films: ArrayList<FilmInfo> = ArrayList()
 }

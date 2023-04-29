@@ -27,8 +27,8 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".activities.FavouriteFilmActivity"
-            android:parentActivityName=".activities.FavouriteFilmActivity"
+            android:name=".activities.WatchedFilmActivity"
+            android:parentActivityName=".activities.WatchedFilmActivity"
             android:exported="true">
 
             <meta-data

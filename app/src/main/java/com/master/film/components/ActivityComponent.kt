@@ -1,6 +1,6 @@
 package com.master.film.components
 
-import com.master.film.activities.FavouriteFilmActivity
+import com.master.film.activities.WatchedFilmActivity
 import com.master.film.activities.FilmInfoActivity
 import com.master.film.activities.LoginActivity
 import com.master.film.activities.SearchFilmActivity
@@ -12,7 +12,7 @@ import javax.inject.Singleton
 @Component(modules = [SearchModule::class])
 interface ActivityComponent {
     fun injectLoginActivity(loginActivity: LoginActivity)
-    fun injectFilmListActivity(favoritesActivity: FavouriteFilmActivity)
+    fun injectFilmListActivity(favoritesActivity: WatchedFilmActivity)
     fun injectFilmSearchActivity(filmSearchActivity: SearchFilmActivity)
     fun injectFilmInfoActivity(filmInfoActivity: FilmInfoActivity)
 }

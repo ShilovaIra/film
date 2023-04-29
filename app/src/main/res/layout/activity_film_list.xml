@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.FavouriteFilmActivity">
+    tools:context=".activities.WatchedFilmActivity">
 
     <TextView
         android:id="@+id/listLabel"
         android:layout_width="271dp"
         android:layout_height="51dp"
         android:gravity="center"
-        android:text="@string/your_favourite_films"
+        android:text="@string/watched"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
