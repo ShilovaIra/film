@@ -8,7 +8,7 @@
 - Installed Android Studio
 ## Installation
 - Clone github repository
-- Get security token for imdb API and set into FilmService
+- Get security token for imdb API "https://imdb-api.com"
 - Start application
 ## Dependencies
 - Retrofit https://square.github.io/retrofit/
