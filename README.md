@@ -3,7 +3,7 @@
 - Search movies
 - Add watched movies
 ## Architecture
-
+![info](https://github.com/ShilovaIra/film/blob/master/app-draw.drawio.png)
 ## Prerequisites
 - Installed Android Studio
 ## Installation
