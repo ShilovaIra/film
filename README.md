@@ -17,5 +17,6 @@
 ## Database structure
 Database stores information about watched films(title, full title, year, image, plot, genres)
 ## Global Reviewers & Maintainers
-Shilova Ira - test@mail.ru
-Chulkova Ira - test1@mail.ru
+- Shilova Ira - test@mail.ru
+- Chulkova Ira - test1@mail.ru
+- Zabiyako Alex - test2@mail.ru
