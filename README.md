@@ -3,7 +3,7 @@
 - Search movies
 - Add watched movies
 ## Architecture
-![diagram drawio (2)](https://user-images.githubusercontent.com/48887942/233739424-871d7bd6-cc62-4594-b5ef-0a5f7245bffb.png)
+![diagram drawio (2)](photo_2023-04-29 11.06.31.jpeg)
 ## Prerequisites
 - Installed Android Studio
 ## Installation
