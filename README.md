@@ -8,7 +8,7 @@
 ## Prerequisites
 - Installed Android Studio
 ## Installation
-- Clone github repository
+- Clone github repository: gh repo clone ShilovaIra/film
 - Get security token for imdb API "https://imdb-api.com"
 - Start application
 ## Dependencies
