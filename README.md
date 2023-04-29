@@ -2,6 +2,7 @@
 ## Functionality
 - Search movies
 - Add watched movies
+- View film info
 ## Architecture
 ![info](https://github.com/ShilovaIra/film/blob/master/app-draw.drawio.png)
 ## Prerequisites
