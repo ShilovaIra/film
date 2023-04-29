@@ -3,7 +3,7 @@
 - Search movies
 - Add watched movies
 ## Architecture
-(https://github.com/ShilovaIra/film/blob/master/photo_2023-04-29%2011.06.31.jpeg)](https://github.com/ShilovaIra/film/blob/master/photo_2023-04-29%2011.06.31.jpeg)
+
 ## Prerequisites
 - Installed Android Studio
 ## Installation
